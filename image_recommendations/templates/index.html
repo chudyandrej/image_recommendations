@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Image recommendation</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="{{ url_for('static', filename='css/portfolio-item.css') }}" rel="stylesheet">
+
+        <link href="{{ url_for('static', filename='css/my_style.css') }}" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Navigation -->
+        {% include 'includes/_navbar.html' %}
+
+        <!-- Page Content -->
+        <div class="container">
+
+            <!-- Portfolio Item Heading -->
+            <h1 class="my-4">Recomending images
+                <small>Text mining</small>
+            </h1>
+
+            <!-- Portfolio Item Row -->
+            <div class="row">
+              <div class="container-fluid">
+                  <label for="comment">Your text:</label>
+                  <textarea class="form-control" rows="10" id="comment"></textarea>
+              </div>
+              <div class="container-fluid">
+                  <button id="sub-button" type="button" data-loading-text="Processing..." class="btn btn-outline-secondary">
+                     Submit
+                  </button>
+              </div>
+            </div>
+          <!-- /.row -->
+
+          <!-- Related Projects Row -->
+            <h3  class="my-4">Result images: </h3>
+            <div id="result" class="row">
+
+            </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; Andrej Chudy 2018</p>
+            </div>
+            <!-- /.container -->
+        </footer>
+
+        <script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/communication.js') }}"></script>
+
+
+    </body>
+
+</html>
